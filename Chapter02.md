@@ -31,12 +31,32 @@
     - MBR (Memory Buffer Register): 메모리 관리자가 메모리에서 가져온 데이터를 임시로 저장
 
 * bus 종류
-  - control bus (제어 버스): 어떤 작업 할지 지시하는 제어 신호가 다님. CPU, 메모리, 주변장치와 양방향으로 오감
-  - address bus (주소 버스): 메모리의 데이터를 읽거나 쓸 때 주소가 다님.
-  - data bus (데이터 버스)
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/109487358-741bed80-7ac7-11eb-8912-fb363f4bed3b.PNG" width="60%">
+  
+  - control bus (제어 버스): 어떤 작업 할지 지시하는 제어 신호가 다님 [양방향]
+  - address bus (주소 버스) [단방향]
+  - data bus (데이터 버스) [양방향]
 
+* memory 종류
+  - RAM (Random Access Memory)
+  - RON (Read Only Memory)
+
+* memory 보호
+  - bound register (경계 레지스터): 현재 진행 중인 작업의 메모리 시작 주소
+  - limit register (한계 레지스터): 현재 진행중인 작업이 차지하는 메모리의 크기 (시작 주소 - 마지막 주소)
+
+* booting
+  - 컴퓨터를 켰을 때 OS를 메모리에 올리는 과정
+  - 전원 ON-> ROM에 저장된 BIOS 실행되어 하드웨어 점검-> 메모리에 bootstrap code 올려 실행-> OS를 메모리로 가져와 실행
 
 ## 03 컴퓨터 성능 향상 기술
+
+* buffer
+  - 일정량의 데이터를 모아 한꺼번에 전송하여 속도 차이 있는 두 장치 사이 차이를 완화
+
+* cache
+  - 메모리와 CPU 간 속도 차이를 완화하기 위해 메모리에서 사용할 것으로 예상되는 데이터를 미리 가져와 저장해두는 임시 장소
 
 
 ## 04 병렬 처리
