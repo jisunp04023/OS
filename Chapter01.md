@@ -29,6 +29,8 @@
 
 ## 03 운영체제의 구조
 
+<img src = "https://user-images.githubusercontent.com/23165155/109463026-b7666400-7aa7-11eb-8c66-5947b31ffc37.PNG" width="50%">
+
 * kernel
   + 운영체제의 핵심적인 기능을 모아 놓은 것
   - system call: 응용 프로그램과 커널 사이의 인터페이스. 함수 형태 (ex. printf())
@@ -39,4 +41,6 @@
 
 * kernel 종류
   + monolithic architecture kernel (단일형 구조 커널)
-  + 
+    - 
+  + layered architecture kernel (계층형 구조 커널)
+  + micro architecture kernel (마이크로 구조 커널)
