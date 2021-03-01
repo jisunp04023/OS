@@ -58,5 +58,11 @@
 * cache
   - 메모리와 CPU 간 속도 차이를 완화하기 위해 메모리에서 사용할 것으로 예상되는 데이터를 미리 가져와 저장해두는 임시 장소
 
+* storage hierarchy
+
+  <img src = "https://user-images.githubusercontent.com/23165155/109492312-1f2fa580-7ace-11eb-91ba-9924a56ee521.PNG" width="50%">
+
+  - 속도 빠르고 값이 비싼 저장장치를 CPU 가까운 쪽에 두고, 값 싸고 용량 큰 저장장치를 반대쪽에 배치
+  - 적당한 가격으로 빠른 속도와 큰 용량을 동시에 얻는 방법
 
 ## 04 병렬 처리
