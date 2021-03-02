@@ -10,6 +10,9 @@
   - program = process - PCB
   
 * process status (active status)
+
+<img src = "https://user-images.githubusercontent.com/23165155/109586610-de28a700-7b48-11eb-9710-f9e39556c252.PNG" width = "50%">
+
   + create status (생성 상태)
     - 프로그램을 메모리에 가져와 실행 준비가 완려된 상태
     - 메모리 할당, PCB 생성
