@@ -6,8 +6,8 @@
 * program: 저장장치에 저장되어 있는 정적인 상태
 
 * PCB (Process Control Block)
-  - process = program + PCB
-  - program = process - PCB
+  * process = program + PCB
+  * program = process - PCB
   
 * process status (active status)
 
