@@ -58,6 +58,29 @@
 
 ## 04 스케줄링 알고리즘
 
-<img src = "https://user-images.githubusercontent.com/23165155/109760631-5d45da00-7c32-11eb-9a21-7631745a20b0.PNG" width = "60%">
+<img src = "https://user-images.githubusercontent.com/23165155/109760631-5d45da00-7c32-11eb-9a21-7631745a20b0.PNG" width = "75%">
 
+* FCFS(First Come First Service) scheduling
+  - 준비 큐에 도착한 순서대로 CPU 할당. 큐 하나라 모든 프로세스의 우선순위가 동일함
+  - 장점: 알고리즘이 단순하고 공평함
+  - 단점: convoy effect(호위 효과)- 실행시간 긴 프로세스가 CPU 차지하면 다른 프로세스는 하염없이 기다려 효율성 떨어짐
 
+* SJF(Shortest Job First) scheduling
+  - 준비 큐에 있는 프로세스 중 실행 시간이 가장 짧은 작업부터 CPU 할당
+  - 장점: convoy effect를 완화하여 시스템 효율성을 높임
+  - 단점
+    - OS가 프로세스 종료 시간을 정확하게 예측하기 어려움
+    - starvation: aging을 통해 완화
+
+* HRN(Highest Response Ratio Next) scheduling
+  - 대기시간과 CPU 사용 시간을 고려하여 우선순위를 결정
+  - 우선순위
+
+    <img src = "https://user-images.githubusercontent.com/23165155/109764043-56b96180-7c36-11eb-9d70-2f9066f1a877.PNG" width = "30%">
+    
+  - starvation을 해결하기 위해 만들어짐.
+* RR(Round Robin) scheduling
+* SRT(Shortest Remaining Time) scheduling
+* priority scheduling
+* multilevel queue scheduling
+* multilevel feedback queue scheduling
