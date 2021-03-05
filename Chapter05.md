@@ -90,7 +90,7 @@
 
   <img src = "https://user-images.githubusercontent.com/23165155/110069376-01f32380-7dbb-11eb-896e-1fcf74340eb1.png" width = "55%">
   
-  - P1부터 서로 번갈아가며 임계구역이ㅔ 진입
+  - P1부터 서로 번갈아가며 임계구역에 진입
     - lockstep synchronization(경직된 동기화): 프로세스 진행이 다른 프로세스로 인해 방해받는 현상 -> 진행의융통성 보장 X
 
 * 하드웨어적인 해결 방법
@@ -120,12 +120,18 @@
     - 피터슨/데커 알고리즘 모두 임계구역 세 가지 조건 만족하지만 매우 복잡
 
 * semaphore
+
+  <img src = "https://user-images.githubusercontent.com/23165155/110071118-d2461a80-7dbe-11eb-826e-548f269f31d2.png" width = "55%">
+  
   - 임계구역에 진입하기 전에 스위치를 사용중으로 놓고 들어갔다가 나올 때 비었음을 표시
   - P(): 사용중인 상태 / V(): 비어있는 상태
     - 바쁜 대기를 하거나 동기화 메시지 보낼 필요 X
     - 
 
 * monitor
+
+  <img src = "https://user-images.githubusercontent.com/23165155/110071208-fbff4180-7dbe-11eb-92da-702ca6144236.png" width = "55%">
+  
   - 세마포어 알고리즘을 자동으로 처리하도록 설계한 코드. 시스템 호출과 같은 개념
   - 보호할 자원을 임계구역에 숨기고 공유 자원에 접근하기 위한 인터페이스만 제공하여 자원을 보호
   - wait(): semaphore의 P() / signal(): semaphore의 V()
