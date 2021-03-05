@@ -66,7 +66,7 @@
 
 * 상호 배제 문제
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110069142-8c875300-7dba-11eb-980e-8d04637c4aa3.png" width = "50%">
+  <img src = "https://user-images.githubusercontent.com/23165155/110069142-8c875300-7dba-11eb-980e-8d04637c4aa3.png" width = "60%">
   
   - P1이 1번을 실행. 잠금이 걸려 있지 않으니 루프를 빠져나옴. 타임아웃
   - P2가 2번을 실행. 아직도 잠금이 걸려 있지 않으니 루프문 빠져나옴. 타임아웃
@@ -77,7 +77,7 @@
 
 * 한정 대기 문제
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110069316-e2f49180-7dba-11eb-9196-106b9f7b5b85.png" width = "50%">
+  <img src = "https://user-images.githubusercontent.com/23165155/110069316-e2f49180-7dba-11eb-9196-106b9f7b5b85.png" width = "55%">
   
   - P1은 1번에서 lock1의 잠금을 걸고 타임아웃
   - P2가 2번에서 lock2의 잠금을 걸고 타임아웃
@@ -88,27 +88,27 @@
 
 * 진행의 융통성 문제
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110069376-01f32380-7dbb-11eb-896e-1fcf74340eb1.png" width = "50%">
+  <img src = "https://user-images.githubusercontent.com/23165155/110069376-01f32380-7dbb-11eb-896e-1fcf74340eb1.png" width = "55%">
   
   - P1부터 서로 번갈아가며 임계구역이ㅔ 진입
     - lockstep synchronization(경직된 동기화): 프로세스 진행이 다른 프로세스로 인해 방해받는 현상 -> 진행의융통성 보장 X
 
 * 하드웨어적인 해결 방법
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110069450-28b15a00-7dbb-11eb-8234-208bd6733880.png" width = "50%">
+  <img src = "https://user-images.githubusercontent.com/23165155/110069450-28b15a00-7dbb-11eb-8234-208bd6733880.png" width = "55%">
   
   - test-and-set 코드로 하드웨어 지원 받아 한꺼번에 실행
     - 바쁜 대기를 사용 -> 자원 낭비
 
 * Peterson algorithm
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110069142-8c875300-7dba-11eb-980e-8d04637c4aa3.png" width = "50%">
+  <img src = "https://user-images.githubusercontent.com/23165155/110070438-55667100-7dbd-11eb-9aad-df76c5e35760.png" width = "55%">
   
   - 두 프로세스가 동시에 lock을 잠갔더라도 turn을 사용해 양보함
     - 2개의 프로세스만 사용하다는 한계
 * Dekker algorithm
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110069142-8c875300-7dba-11eb-980e-8d04637c4aa3.png" width = "50%">
+  <img src = "https://user-images.githubusercontent.com/23165155/110070501-7cbd3e00-7dbd-11eb-9dd3-a48b86f17e70.png" width = "55%">
   
   - P1이 lock1에 잠금을 걸고 타임아웃
   - P2도 lock2에 잠금을 걸고 타임아웃
