@@ -67,6 +67,9 @@
     - 장점: 하나의 프로세스를 연속된 공간에 배치
     - 단점: 메모리 관리가 복잡
   - external fragmentation
+ 
+    <img src = "https://user-images.githubusercontent.com/23165155/110281725-97432180-8020-11eb-8dee-4ed4b9729082.png" width = "45%">
+    
 
 * fixed-size partitioning (고정 분할 방식) (= paging)
   - 프로세스 크기와 상관없이 메모리를 같은 크기로 나눔
