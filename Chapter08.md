@@ -8,7 +8,7 @@
   - virtual memory = main memory + swap area
   - DAT (Dynamic Address Translation) (동적 주소 변환): 가상 주소를 실제 메모리의 물리 주소로 변환하는 작업
 
-  <img src = "https://user-images.githubusercontent.com/23165155/110404596-7b905780-80c2-11eb-98d8-d046925b4858.png" width = "55%">
+    <img src = "https://user-images.githubusercontent.com/23165155/110404596-7b905780-80c2-11eb-98d8-d046925b4858.png" width = "55%">
 
 
 * mapping table
