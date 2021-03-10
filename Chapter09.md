@@ -55,7 +55,7 @@
 * page replacement algorithm
   - 빈 프레임이 없을 때 어떤 페이지를 스왑 영역으로 내보낼지 결정하는 알고리즘
 
-  <img src = "" width = "%60">
+  <img src = "https://user-images.githubusercontent.com/23165155/110614493-bd5df280-81d5-11eb-8e2b-5e1e0dd05cdd.png" width = "%60">
   
 
 * random page replacement algorithm (무작위)
@@ -73,16 +73,37 @@
 
 * LRU(Least Recently Used) page replacement algorithm
   - 시간적으로 멀리 떨어진 페이지를 스왑 영역으로 보냄
-  - 페이지에 접근한 시각을 기록하여 구현----------------------------------------------------------438쪽 
+  - 페이지에 접근한 시각을 기록하거나 reference bit shift 이용해 구현 -> 메모리 낭비
+  - 일반적으로 성능: FIFO < 2nd chance < LRU = LFU = NUR < optimal
 
 * LFU(Least Frequently Used) page replacement algorithm
   - 사용 빈도가 적은 페이지를 스왑 영역으로 보냄
+  - 접근 횟수를 표시하는 데 추가 공간이 필요 -> 메모리 낭비
 
 * NUR(Not Used Recently) page replacement algorithm
   - 최근에 사용한 적이 없는 페이지를 스왑 영역으로 보냄
+  - LRU, LFU와 성능 비슷. 공간 낭비 문제를 해결
+  - 추가비트 2개만 사용
+    - 참조 비트: 페이지에 접근(read/execute)하면 1
+    - 변경 비트: 페이지 변경(write/append)되면 1
 
 * FIFO 변형
-  - FIFO 알고리즘을 변형하여 성능을 높임
+  - FIFO 알고리즘을 변형하여 성능을 높임. 접근할 때마다 순서의 변화를 주어 성능을 향상
+  - second chance page replacement algorithm
+    - 페이지 부재 없이 성공할 경우 큐의 tail로 옮겨 기회를 한번 더 줌
+    - 큐 유지 비용 높고, 큐 중간에 있는 값을 뒤로 이동하는 작업이 추가됨
+  - clock algorithm
+    - 2차 기회 페이지 교체 알고리즘 + 원형 큐
+    - pointer가 옮길 대상 페이지를 가리킴
+    - 2차 기회 알고리즘에 비해 참조비트가 하나씩 추가됨. 성공적으로 참조하면 참조비트 0->1
+    - 참조 비트 1인 페이지 건너 뛸 때는 참조비트 1->0
+
+      <img src = "https://user-images.githubusercontent.com/23165155/110613755-fa75b500-81d4-11eb-8f0c-555e41c8b86f.png" width = "80%">
+      
+    - pointer가 이동하는 경우
+      - 요구 페이지가 없는 경우
+      - 참조비트가 1인 경우
+    - 참조비트 하나만 추가하기 때문에 NUR보다 추가 공간 적게 들지만, 알고리즘이 복잡하고 계산량 많음
 
 
 ## 03 스레싱 프레임 할당
