@@ -42,7 +42,7 @@
 
 * 페이지 테이블 매핑 방식
 
-  <img src = "" width = "%80">
+  <img src = "https://user-images.githubusercontent.com/23165155/110557979-fa4dc900-8184-11eb-89b7-d93cb8bbaa17.png" width = "%90">
   
   - direct mapping (직접 매핑)
     - 페이지 테이블 전체가 물리 메모리의 운영체제 영역에 존재하는 방식
