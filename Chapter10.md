@@ -36,12 +36,30 @@
   - head: 데이터를 읽거나 쓸 때는 read/write head를 사용
 
 * 하드디스크와 CD 비교
+  - HD
+    - constant angular velocity (각속도 일정 방식의 회전)
+      - 바깥쪽 트랙의 속도가 안쪽보다 빠름. 바깥쪽 섹터가 안쪽 트랙보다 더 큼. 모든 트랙의 섹터 수 같음
+  - CD
+    - constant linear velocity (선속도 일정 방식의 회전)
+      - 모든 트랙의 움직이는 속도 같음, 섹터 크기도 같음. 바깥쪽 트랙에 섹터 수 더 많음
 
 * 디스크 장치의 전송 시간
   - 하드디스크에서 데이터 가져오는 데 걸리는 총 시간 (= 탐색 시간 + 회전 지연 시간 + 전송 시간)
+    - seek time: 현재 위치부터 섹터가 있는 트랙까지 헤드가 이동하는데 걸리는 시간
+    - rotational latency time: 원하는 섹터를 만날때까지 플래터가 회전하는 시간
+    - transmission time: 데이터를 읽어 전송하는데 걸리는 시간
+  - 성능을 높이려면 가장 많은 비중 차지하는 탐색시간을 최소화 해야 함 -> 조각 모음, 디스크 스케줄링 기법 사용
 
 * 디스크 장치 관리
+  - partition: 디스크를 논리적으로 분할하는 작업
+  - formating: 디스크 표면을 초기화하는 작업
+  - defragmentation: 디스크에 파일을 저장했다 지우기를 반복하여 중간중간 생긴 빈 공간을 하나로 모으는 작업
+
 * 네트워크 저장장치
+  - DAS (Direct Attached Storage)
+    - 한 컴퓨터를 파일 공유 서버로 지정, 나머지 컴퓨터에 서버로 지정된 컴퓨터에 접근하여 파일을 이용하는 방식
+  - NAS (Network Attached Storage)
+  - SAN (Storage Area Network)
 
 
 ## 03 디스크 스케줄링
