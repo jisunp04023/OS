@@ -29,6 +29,9 @@
 ## 02 디스크 장치
 
 * HDD (Hard Disk Drive)
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110874804-c22abf80-8317-11eb-809a-bf2e580d2dd7.png" width = "50%">
+  
   - 원반을 사용한 저장장치. 맨 앞 데이터나 맨 뒤 데이터나 접근하는 속도가 거의 비슷
   - platter: 표면에 자성체가 발려 자기를 이용해 0, 1을 저장
   - sector, block: 섹터는 하드웨어 입장에서 하드디스크의 가장 작은 저장 단위 (블록은 OS 입장에서 가장 작은 저장 단위)
@@ -57,10 +60,19 @@
 
 * 네트워크 저장장치
   - DAS (Direct Attached Storage)
+    
+    <img src = "https://user-images.githubusercontent.com/23165155/110875076-4f6e1400-8318-11eb-9b8d-f54ef9202baf.png" width = "40%">
+    
     - 서버와 같은 컴퓨터에 직접 연결된 저장장치
   - NAS (Network Attached Storage)
+    
+    <img src = "https://user-images.githubusercontent.com/23165155/110875192-83e1d000-8318-11eb-9473-0505872631de.png" width = "40%">
+    
     - 기존의 저장장치를 LAN이나 WAN에 붙어서 사용하는 방식
   - SAN (Storage Area Network)
+    
+    <img src = "https://user-images.githubusercontent.com/23165155/110875298-b390d800-8318-11eb-9126-b250995e62b5.png" width = "50%">
+    
     - 데이터 서버, 백업 서버, RAID 등의 장치를 네트워크로 묶고 데이터 접근을 위한 서버를 두는 형태
 
 
