@@ -142,7 +142,16 @@
 
 ## 04 RAID
 
-* RAID
+* RAID (Redundant Array of Independent Disks)
   - 자동으로 백업을 하고 장애가 발생하면 이를 복구하는 시스템
   - 동일한 규격의 디스크를 여러 개 모아 구성하여 장애가 발생했을 때 데이터를 복구하는 데 사용
   - 0 1 2 3 4 5 6 0+1 10 50 60
+
+* RAID 0
+  - 순수한 mirroring 제공. 데이터 전송 빠르지만 복구 기능 X
+
+* RAID 1
+  - 순수한 striping 제공.
+
+* RAID 10 (1+0)
+  - mirroring + striping 동시에 지원. 빠른 입출력과 복구 
