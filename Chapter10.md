@@ -78,28 +78,33 @@
 
 ## 03 디스크 스케줄링
 
-* FCFS
+* FCFS(First Come, First Service) disk scheduling
   - 가장 단순. 트랙 요청이 들어온 순서대로 서비스
 
-* SSTF
+* SSTF(Shortest Seek Time First) disk scheduling
   - 현재 헤드가 있는 위치에서 가장 가까운 트랙부터 서비스. 같다면 먼저 요청한 트랙을 서비스
+  - 효율성 좋지만 아사 현상 -> 공평성 위배
 
-* 블록 SSTF
+* block SSTF disk scheduling
   - SSTF의 공평성 위배를 어느정도 해결. 에이징을 적용
+  - 큐에 있는 트랙 요청을 일정한 블록 형태로 묶음
+  - 현재 트랙에서 가장 먼 트랙을 블록의 끝으로 이동 (aging) -> 공평성 보장
+  - 성능: FCFS = block SSTF < SCAN < SSTF
 
-* SCAN
+* SCAN disk scheduling
   - SSTF의 공평성 위배를 완화. 헤드가 움직이기 시작하면 맨 마지막 트랙에 도착할 때까지 뒤돌아가지 않고 전진하며 서비스
+  - 동일한 트랙/실린더 요청이 연속적으로 발생하면 헤드가 제자리에 머물러 바깥쪽 트랙이 아사현상 
 
-* C-SCAN
+* C-SCAN (Circular SCAN) disk scheduling
   - 헤드가 한쪽 방향으로 움직일 때는 요청받은 트랙을 서비스하지만 반대로 돌아올 때는 서비스하지 않고 헤드만 이동
 
-* LOOK
+* LOOK disk scheduling
   - 더 이상 서비스할 트랙이 없으면 헤드가 끝까지 가지 않고 중간에 방향을 바꿈
 
-* C-LOOK
+* C-LOOK (Circular LOOK) disk scheduling
   - C-SCAN의 LOOK 버전. 더 이상 서비스할 트랙이 없으면 헤드가 중간에 방향을 바꿈
 
-* SLTF
+* SLTF(Shortest Latency Time First) disk scheduling
   - 헤드가 고정된 저장장치에서 사용. 요청이 들어온 섹터의 순서를 디스크가 회전하는 방향에 맞추어 다시 정렬한 후 서비스
 
 ## 04 RAID
