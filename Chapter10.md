@@ -78,34 +78,67 @@
 
 ## 03 디스크 스케줄링
 
+  <img src = "https://user-images.githubusercontent.com/23165155/110885869-f52a7e80-832a-11eb-99c0-87cfee7aedc0.png" width = "45%">
+
+
 * FCFS(First Come, First Service) disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110885929-125f4d00-832b-11eb-9683-8e68e9239259.png" width = "55%">
+  
   - 가장 단순. 트랙 요청이 들어온 순서대로 서비스
 
 * SSTF(Shortest Seek Time First) disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110885990-33c03900-832b-11eb-90e0-d0dbfdc79c84.png" width = "55%">
+  
   - 현재 헤드가 있는 위치에서 가장 가까운 트랙부터 서비스. 같다면 먼저 요청한 트랙을 서비스
   - 효율성 좋지만 아사 현상 -> 공평성 위배
 
 * block SSTF disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886063-53576180-832b-11eb-91b7-e9d8e2b8f543.png" width = "50%">
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886117-77b33e00-832b-11eb-8f42-d81f2d891d35.png" width = "55%">
+  
   - SSTF의 공평성 위배를 어느정도 해결. 에이징을 적용
   - 큐에 있는 트랙 요청을 일정한 블록 형태로 묶음
   - 현재 트랙에서 가장 먼 트랙을 블록의 끝으로 이동 (aging) -> 공평성 보장
   - 성능: FCFS = block SSTF < SCAN < SSTF
 
 * SCAN disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886188-9a455700-832b-11eb-966d-6d095c01ef8d.png" width = "55%">
+  
   - SSTF의 공평성 위배를 완화. 헤드가 움직이기 시작하면 맨 마지막 트랙에 도착할 때까지 뒤돌아가지 않고 전진하며 서비스
-  - 동일한 트랙/실린더 요청이 연속적으로 발생하면 헤드가 제자리에 머물러 바깥쪽 트랙이 아사현상 
+  - 동일한 트랙/실린더 요청이 연속적으로 발생하면 헤드가 제자리에 머물러 바깥쪽 트랙이 아사현상
 
 * C-SCAN (Circular SCAN) disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886266-b943e900-832b-11eb-8214-320daece8f33.png" width = "55%">
+  
   - 헤드가 한쪽 방향으로 움직일 때는 요청받은 트랙을 서비스하지만 반대로 돌아올 때는 서비스하지 않고 헤드만 이동
+  - 모든 트랙의 방문 횟수가 동일하지만. / 작업 없이 헤드 이동 -> 비효율적
+  - 동일한 트랙/실린더 요청이 연속적으로 발생하면 헤드가 제자리에 머물러 바깥쪽 트랙이 아사현상
+  - 성능: C-SCAN < SCAN < LOOK
 
 * LOOK disk scheduling
-  - 더 이상 서비스할 트랙이 없으면 헤드가 끝까지 가지 않고 중간에 방향을 바꿈
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886337-d2e53080-832b-11eb-81f2-6fd5b23df7b9.png" width = "55%">
+  
+  - C-SCAN과 유사하지만 더 이상 서비스할 트랙이 없으면 헤드가 끝까지 가지 않고 중간에 방향을 바꿈
 
 * C-LOOK (Circular LOOK) disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886437-f4deb300-832b-11eb-922c-e4113776e376.png" width = "55%">
+  
   - C-SCAN의 LOOK 버전. 더 이상 서비스할 트랙이 없으면 헤드가 중간에 방향을 바꿈
 
 * SLTF(Shortest Latency Time First) disk scheduling
+  
+  <img src = "https://user-images.githubusercontent.com/23165155/110886508-163f9f00-832c-11eb-8ce9-8228df0971af.png" width = "35%">
+  
   - 헤드가 고정된 저장장치에서 사용. 요청이 들어온 섹터의 순서를 디스크가 회전하는 방향에 맞추어 다시 정렬한 후 서비스
+  - 탐색 시간이 없어서 매우 빠르게 데이터 주고 받지만, 매우 고가
 
 ## 04 RAID
 
